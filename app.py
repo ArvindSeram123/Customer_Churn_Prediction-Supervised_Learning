@@ -41,3 +41,7 @@ if st.button("Predict Churn"):
     st.subheader("🔍 Prediction Result")
     st.write("Churn:" if prediction == 1 else "Not Churn")
     st.write(f"Probability of churn: **{probability:.2f}**")
+
+
+st.write("Input for model:")
+st.dataframe(input_df)
