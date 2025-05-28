@@ -39,7 +39,7 @@ if st.button("Predict Churn"):
     probability = model.predict_proba(input_df)[0][1]
     
     st.subheader("🔍 Prediction Result")
-    st.write("Churn:" if prediction == 1 else "Not Churn")
+    st.write("Churn:" if prediction >= 0.1 else "Not Churn")
     st.write(f"Probability of churn: **{probability:.2f}**")
 
 
